@@ -2,13 +2,19 @@
     angular.module("PassportApp")
         .config(function($routeProvider, $httpProvider) {
             $routeProvider
-              .when('/home', {
-                  templateUrl: 'views/home/home.view.html',
-                  controller: 'HomeController',
-                  resolve: {
-                      loggedin: checkCurrentUser
-                  }
-              })
+                .when('/artists', {
+                    templateUrl: 'views/artist/artist-list.view.client.html'
+                })
+                .when('/search', {
+                    templateUrl: 'views/search/search-results.view.client.html'
+                })
+                .when('/home', {
+                    templateUrl: 'views/home/home.view.html',
+                    controller: 'HomeController',
+                    resolve: {
+                        loggedin: checkCurrentUser
+                    }
+                })
               .when('/profile', {
                   templateUrl: 'views/profile/profile.view.html',
                   controller: 'ProfileCtrl',

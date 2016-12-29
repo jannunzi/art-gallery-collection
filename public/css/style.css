@@ -1,3 +1,18 @@
 .form-control, .btn-block {
     margin-bottom: 10px;
 }
+
+.navbar-default {
+    background-color: red !important;
+}
+
+.navbar-brand {
+    color: cyan;
+}
+
+
+.panel-default {
+    border-color: black;
+    border-width: 10px;
+    margin-right: 20px;
+}

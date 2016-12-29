@@ -1,40 +1,35 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
-        <link href="css/style.css" rel="stylesheet"/>
-        <script src="js/jquery-1.11.2.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/angular.js"></script>
-        <script src="js/angular-route.js"></script>
-        <script src="app.js"></script>
-        <script src="config.js"></script>
-        <script src="views/home/home.controller.js"></script>
-        <script src="views/login/login.controller.js"></script>
-        <script src="views/register/register.controller.js"></script>
-        <script src="views/profile/profile.controller.js"></script>
-        <script src="views/nav/nav.controller.js"></script>
-        <script src="views/admin/admin.controller.js"></script>
-        <script src="services/user.services.client.js"></script>
-    </head>
-    <body ng-app="PassportApp">
-        <div class="container">
-            <nav ng-controller="NavCtrl">
-              <a href="#home">Home</a> |
-              <span ng-show="!currentUser">
-                  <a href="#login">Login</a> |
-                  <a href="#register">Register</a>
-              </span>
-              <span ng-show="currentUser">
-                  <a href="#profile">Profile</a> |
-                  <span ng-show="currentUser.roles.indexOf('admin') != -1">
-                  <a href="#admin">Admin</a> |
-                  </span>
-                  <a href="#logout" ng-click="logout()">Logout</a>
-              </span>
-            </nav>
-            <div ng-view>
-            </div>
-        </div>
-    </body>
+
+<!DOCTYPE html>
+<html lang="en" ng-app="PassportApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jumbotron Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="views/home/home.controller.js"></script>
+    <script src="views/login/login.controller.js"></script>
+    <script src="views/register/register.controller.js"></script>
+    <script src="views/profile/profile.controller.js"></script>
+</head>
+
+<body>
+
+<div ng-view>
+</div>
+</body>
 </html>
